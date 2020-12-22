@@ -1,0 +1,63 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+.nav-link, .navlink:visited {
+    color: white !important;
+    text-decoration: none;
+}
+
+.navbar {
+    padding: 15px 100px;
+    background-color: #000;
+}
+
+.navbar a {
+    color: white;
+    margin: 0px 35px;
+    font-size: 16px;
+    font-family: "Hind Guntur", "sans-serif";
+}
+
+.navbar-btn {
+    background-color: #fc5917;
+    border: none;
+    padding: 10px 50px !important;
+}
+
+.landing {
+    background-image: url("../assets/images/Landing/roberto-carlos-roman-TS_g_856-CA-unsplash.jpg");
+    height: 800px;
+    background-size: cover;
+}
+
+.landing-container {
+    width: 50%;
+    margin: 0px 5%;
+}
+
+.landing-text {
+    margin: 70px 0px 0px 0px;
+    padding: 300px 0px 0px 0px;
+}
+
+.landing-text h1 {
+    font-size: 54;
+    font-family: "Viga", "sans-serif";
+}
+
+.products-container {
+    width: 80%;
+    margin: 0px auto;
+    padding: 40px 0px;
+}
+
+.products-header {
+    font-family: "Hind Guntur", "sans-serif";
+    font-size: 36pt;
+    padding: 0px 0px 0px 15px;
+}
+
+.product {
+    margin: 0px 0px 100px 0px !important;
+    width: 20px !important;
+}
