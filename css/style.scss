@@ -1,7 +1,15 @@
 $primary:       #fc5917 !default;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+html {
+    scroll-behavior: smooth;
+}
 
+/*
+==============
+=== NAVBAR ===
+==============
+*/
 .nav-link, .navlink:visited {
     color: white !important;
     text-decoration: none;
@@ -21,10 +29,15 @@ $primary:       #fc5917 !default;
 }
 
 .navbar-btn {
-    background-color: #fc5917;
     border: none;
     padding: 10px 50px !important;
 }
+
+/*
+=======================
+=== LANDING SECTION ===
+=======================
+*/
 
 .landing {
     background-image: url("../assets/images/Landing/roberto-carlos-roman-TS_g_856-CA-unsplash.jpg");
@@ -32,46 +45,110 @@ $primary:       #fc5917 !default;
     background-size: cover;
 }
 
-.landing-container {
+.landing-container, .aboutUs-container {
     width: 50%;
     margin: 0px 5%;
 }
 
 .landing-text {
     margin: 65px 0px 0px 0px;
-    padding: 40% 0px 0px 0px;
+    padding: 35% 0px 0px 0px;
 }
 
-.landing-text h1 {
+.landing-mainText {
     font-size: 54px;
-    font-weight: 400;
+    font-weight: 400 !important;
     font-family: "Viga", sans-serif;
+}
+
+@include media-breakpoint-down(md) {
+    .navbar-brand {
+        margin: 0 35px 0 0 !important;
+    }
+
+    .landing {
+        height: 100vh;
+        background-position: center center;
+    }
+
+    .landing-container, .aboutUs-container {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .landing-text {
+        padding: 50% 0 0 0;
+        margin: 0 auto;
+    }
+
+    .landing-mainText {
+        font-size: 40px;
+    }
+}
+
+/*
+========================
+=== PRODUCTS SECTION ===
+========================
+*/
+
+.product {
+    margin: 0 0 100px 0;
 }
 
 .products-container {
     width: 80%;
     margin: 0px auto;
-    padding: 40px 0px;
+    padding: 50px 0 0 0;
+}
+
+.products-container > .container-fluid {
+    padding: 0 0 0 15px !important;
 }
 
 .products-header {
     font-family: "Hind Guntur", sans-serif;
-    font-size: 36pt;
+    font-size: 36px;
     padding: 0 0 0 15px;
-    margin: 0 0 0 20px;
+    margin: 40px 0;
 }
 
-@media only screen and (max-width: 576px) {
+@include media-breakpoint-down(xs) {
+    .product {
+        margin: 0 0 50px 0;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .product-card > .card-img-top {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+}
+
+@include media-breakpoint-down(md) {
     .products-header {
         text-align: center;
+        margin: 0;
+        padding: 0;
     }
 
-    .product > .product-card {
-        margin: 0 auto 100px auto;
-    }
-    
     .products-container {
-        width: 95%;
+        width: 90%;
+    }
+
+    .product-card {
+        width: 100% !important;
+    }
+
+    .product-card > .card-img-top {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .product-card > .card-body {
+        width: 100% !important;
     }
 }
 
@@ -88,16 +165,14 @@ $primary:       #fc5917 !default;
     opacity: 100%;
 }
 
-.product > .product-card {
+.product-card {
     border-radius: 23px;
     background-color: #fbece0;
     width: 253px;
-    height: 380px;
     border: none;
     position: relative;
     padding: 5px;
     color: #131314;
-    margin:0 0 100px 0;
     transition: 0.25s ease-in-out;
 }
 
@@ -124,15 +199,21 @@ $primary:       #fc5917 !default;
 
 .product-card > .card-img-top {
     border-radius: 20px;
-    width: 243px !important;
-    height: 243px !important;
+    max-width: 243px;
+    max-height: 243px;
     opacity: 40%;
     transition: ease-in-out 0.25s;
 }
 
-.product > .product-card > .card-text {
+.product > .product-card > .card-body > .card-text {
     font-family: "Raleway", sans-serif;
-    font-size: 11pt;
+    font-size: 12px;
+    line-height: 2.5;
+}
+
+.product > .product-card > .card-body > .card-subtitle {
+    font-size: 13px;
+    padding: 0 0 10px 0;
 }
 
 .buyNowbtn {
@@ -144,4 +225,171 @@ $primary:       #fc5917 !default;
     width: 100px;
     margin: 20px;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*
+================
+=== ABOUT US ===
+================
+*/
+
+.aboutUs {
+    background-image: url("../assets/images/AboutUs/BGaboutUs.jpg");
+    background-size: cover;
+    height: 770px;
+}
+
+.aboutUs-text {
+    margin: 0 auto 0 auto;
+    padding: 25% 0px 0px 0px;
+}
+
+.aboutUs-mainText {
+    font-size: 36px;
+}
+
+.aboutUs-secondText {
+    height: 2.6em;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 0 50px 0;
+}
+
+@include media-breakpoint-down(md) {
+    .aboutUs-text {
+        margin: 0 auto;
+    }
+
+    .aboutUs {
+        background-position: 30% center;
+    }
+}
+/*
+====================
+=== BLOG SECTION ===
+====================
+*/
+
+.blog {
+    background-color: #fc5917;
+}
+
+.blog-text {
+    padding: 0;
+}
+
+.blog-mainText {
+    padding: 100px 0;
+    margin: 0;
+    font-family: "Hind Guntur", "sans-serif";
+    font-size: 36px;
+}
+
+.blog-postsContainer {
+    width: 75%;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-mainPostimg {
+    max-width: 100%;
+    max-height: 100%;
+    height: 200px;
+    width: 200px !important;
+    padding: 0;
+}
+
+.img-square-wrapper > img {
+    width: 253px;
+    height: 253px;
+    border-radius: 20px 0 0 20px;
+}
+
+.blog-mainPost > div > .card {
+    border-radius: 20px;
+    border: none;
+    color: #131314;
+    
+}
+
+.blog-mainPost > div > .card a {
+    transition: 1s ease-in-out;
+}
+
+.blog-mainPost > div > .card > .card-horizontal > .card-body > .card-text {
+    height: 7.5em;
+    line-height: 1.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 30px 0 0 0;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.blog-otherPost > .card-img-top {
+    border-radius: 20px;
+}
+
+.blog-otherPost {
+    margin: 40px 0;
+}
+
+.blog-otherPost > .card-body {
+    padding: 12px;
+}
+
+.blog-otherPost > .card-body > .card-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.blog-otherPost > .card-body > .card-subtitle {
+    margin: 0;
+    font-size: 20px;
+}
+
+.blog-otherPosts {
+    padding: 0;
+}
+
+.blog-otherPosts > div > .col-12 {
+    padding: 0;
+}
+
+.blog-otherPosts > div > div {
+    & a, a:visited {
+      color: #fbece0;
+      text-decoration: none;
+    }
+    & a:hover,  a.active {
+      color: #fbece0;
+    }
+  }
+
+@include media-breakpoint-down(md) {
+    .blog-mainText {
+        text-align: center;
+    }
+
+    .blog-postsContainer {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .card-horizontal {
+        display: block;
+        flex: none;
+    }
+
+    .img-square-wrapper img {
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 100%;
+    }
 }
