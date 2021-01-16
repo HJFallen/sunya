@@ -11104,9 +11104,10 @@ html {
   color: #131314;
 }
 
-.blog-mainPost > div > .card a {
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+.blog-mainPost > div > div > div > .card-body > .card-title {
+  color: inherit;
+  -webkit-text-decoration-color: #fc5917;
+          text-decoration-color: #fc5917;
 }
 
 .blog-mainPost > div > .card > .card-horizontal > .card-body > .card-text {
@@ -11133,6 +11134,13 @@ html {
 
 .blog-otherPost {
   margin: 40px 0;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.blog-otherPost:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .blog-otherPost > .card-body {

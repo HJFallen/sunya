@@ -310,11 +310,11 @@ html {
     border-radius: 20px;
     border: none;
     color: #131314;
-    
 }
 
-.blog-mainPost > div > .card a {
-    transition: 1s ease-in-out;
+.blog-mainPost > div > div > div > .card-body > .card-title {
+    color: inherit;
+    text-decoration-color: #fc5917;
 }
 
 .blog-mainPost > div > .card > .card-horizontal > .card-body > .card-text {
@@ -337,6 +337,11 @@ html {
 
 .blog-otherPost {
     margin: 40px 0;
+    transition: 0.25s ease-in-out;
+}
+
+.blog-otherPost:hover {
+    transform: scale(1.05);
 }
 
 .blog-otherPost > .card-body {
