@@ -393,3 +393,27 @@ html {
         height: 100%;
     }
 }
+
+/*
+==============
+=== FOOTER ===
+==============
+*/
+
+footer {
+    background-color: #131314;
+    padding: 16px 0;
+}
+
+footer > .container-fluid > div > .col-4, footer > .container-fluid > div, footer > .container-fluid{
+    padding: 0;
+}
+
+.footerLinks a:hover {
+    color: #86919c;
+    text-decoration: none;
+}
+
+.footerLinks a {
+    color: #fbece0 !important;
+} 
