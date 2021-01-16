@@ -407,18 +407,43 @@ html {
 
 footer {
     background-color: #131314;
-    padding: 16px 0;
+    color: #fbece0;
 }
 
 footer > .container-fluid > div > .col-4, footer > .container-fluid > div, footer > .container-fluid{
     padding: 0;
 }
 
-.footerLinks a:hover {
-    color: #86919c;
+.footer a:hover {
     text-decoration: none;
+    
 }
 
-.footerLinks a {
+.footer a {
     color: #fbece0 !important;
 } 
+
+.footer-container {
+    width: 80%;
+    margin: 0px auto;
+    padding: 50px 0 0 0;
+}
+
+.footer-container > .container-fluid {
+    padding: 0 0 0 40px !important;
+}
+
+.footer-header {
+    font-family: "Hind Guntur", sans-serif;
+    font-size: 36px;
+    margin: 40px 0;
+}
+
+.footer > div > div > div > div div > div > a {
+    border: none;
+    padding: 10px 50px !important;
+}
+
+.footer > div > div > div > div div > div {
+    margin: auto 0;
+}

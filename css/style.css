@@ -11203,19 +11203,43 @@ html {
 */
 footer {
   background-color: #131314;
-  padding: 16px 0;
+  color: #fbece0;
 }
 
 footer > .container-fluid > div > .col-4, footer > .container-sm > div > .col-4, footer > .container-md > div > .col-4, footer > .container-lg > div > .col-4, footer > .container-xl > div > .col-4, footer > .container-fluid > div, footer > .container-sm > div, footer > .container-md > div, footer > .container-lg > div, footer > .container-xl > div, footer > .container-fluid, footer > .container-sm, footer > .container-md, footer > .container-lg, footer > .container-xl {
   padding: 0;
 }
 
-.footerLinks a:hover {
-  color: #86919c;
+.footer a:hover {
   text-decoration: none;
 }
 
-.footerLinks a {
+.footer a {
   color: #fbece0 !important;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0px auto;
+  padding: 50px 0 0 0;
+}
+
+.footer-container > .container-fluid, .footer-container > .container-sm, .footer-container > .container-md, .footer-container > .container-lg, .footer-container > .container-xl {
+  padding: 0 0 0 40px !important;
+}
+
+.footer-header {
+  font-family: "Hind Guntur", sans-serif;
+  font-size: 36px;
+  margin: 40px 0;
+}
+
+.footer > div > div > div > div div > div > a {
+  border: none;
+  padding: 10px 50px !important;
+}
+
+.footer > div > div > div > div div > div {
+  margin: auto 0;
 }
 /*# sourceMappingURL=style.css.map */
