@@ -11275,6 +11275,19 @@ footer > .container-fluid > div > .col-4, footer > .container-sm > div > .col-4,
   font-weight: 625;
 }
 
+.footer-credits a {
+  color: #454545 !important;
+  text-decoration: underline;
+  text-underline-offset: 1.5px;
+}
+
+.footer-credits a:hover {
+  color: #454545 !important;
+  border-bottom: 2px dotted #454545;
+  display: inline-block;
+  height: 1.4em;
+}
+
 .footer-credits > .col-12 {
   margin: 0;
 }
