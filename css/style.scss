@@ -28,7 +28,7 @@ html {
     vertical-align: middle !important;
 }
 
-.navbar-btn {
+.followUs-btn {
     border: none;
     padding: 10px 50px !important;
 }
@@ -130,7 +130,7 @@ html {
 @include media-breakpoint-down(md) {
     .products-header {
         text-align: center;
-        margin: 0;
+        margin: 0 0 40px;
         padding: 0;
     }
 
@@ -335,6 +335,10 @@ html {
     border-radius: 20px;
 }
 
+.blog-otherPosts > .row > div {
+    gap: 20px;
+}
+
 .blog-otherPost {
     margin: 40px 0;
     transition: 0.25s ease-in-out;
@@ -410,13 +414,16 @@ footer {
     color: #fbece0;
 }
 
+.footer, .footer-followUs-btn {
+    font-weight: 625;
+}
+
 footer > .container-fluid > div > .col-4, footer > .container-fluid > div, footer > .container-fluid{
     padding: 0;
 }
 
 .footer a:hover {
     text-decoration: none;
-    
 }
 
 .footer a {
@@ -436,7 +443,7 @@ footer > .container-fluid > div > .col-4, footer > .container-fluid > div, foote
 .footer-header {
     font-family: "Hind Guntur", sans-serif;
     font-size: 36px;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .footer > div > div > div > div div > div > a {
@@ -446,4 +453,77 @@ footer > .container-fluid > div > .col-4, footer > .container-fluid > div, foote
 
 .footer > div > div > div > div div > div {
     margin: auto 0;
+}
+
+.footer-links > .row {
+    margin: auto 0;
+}
+
+.footer-links > .row > .col-12 > div {
+    justify-content: end !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-links > .col-12 > div {
+    justify-content: end !important;
+}
+
+.footer-credits {
+    padding: 10px 0 20px;
+    color: #454545;
+    font-weight: 625;
+}
+
+.footer-credits > .col-12 {
+    margin: 0;
+}
+
+@include media-breakpoint-down(md) {
+    .footer-container {
+        padding: 20px 0 0 0;
+    }
+
+    .footer-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 30px 0 0 0;
+    }
+    
+    .footer-container > .container-fluid {
+        padding: 0 !important;
+    }
+
+    .footer-header img {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .footer-links {
+        text-align: center;
+        margin: 30px 0 20px;
+    }
+
+    .footer-links > .followUs-btn {
+        justify-self: center !important;
+    }
+
+    .footer-links > .row > .col-md-6 {
+        margin: 20px 0;
+    }
+
+    .footer-links > .row > .col-md-4 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-links {
+        margin-bottom: 0;
+    }
+
+    .footer-credits {
+        text-align: center;
+    }
 }
